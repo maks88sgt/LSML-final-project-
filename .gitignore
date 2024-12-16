@@ -1,0 +1,6 @@
+/ECCO_DATA
+/.ipynb_checkpoints
+/images
+/server/saved_models
+/wandb
+/server/__pycache__

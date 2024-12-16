@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: fastapi_server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server:/app
+    restart: always
+
+  client:
+    build:
+      context: ./image-similarity-app
+      dockerfile: Dockerfile
+    container_name: react_client
+    ports:
+      - "3000:80"
+    restart: always
